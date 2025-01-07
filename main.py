@@ -28,7 +28,7 @@ class MyApp(MDApp):
         self.theme_cls.accent_hue = '900'
         self.theme_cls.material_style = "M2"
 
-        #self.sm.add_widget(TelaLoginView())
+        self.sm.add_widget(TelaLoginView())
         self.sm.add_widget(TelaPrincView())
         self.sm.add_widget(PokemonView())
         self.sm.add_widget(RickandMortyView())

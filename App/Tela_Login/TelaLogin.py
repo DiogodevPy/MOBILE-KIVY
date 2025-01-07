@@ -12,12 +12,5 @@ class TelaLoginView(MDScreen):
             self.manager.transition.direction = 'left'
             self.manager.current = 'princ_view'
             self.ids.erro.text = ''
-
-        elif self.ids.usuario.text == usuario and self.ids.senha.text == senha:
-            
-            self.manager.transition.direction = 'left'
-            self.manager.current = 'Tela_Princ2'
-            self.ids.erro.text = ''
-
         else:
             self.ids.erro.text = 'Usuário ou Senha Incorreto!'
