@@ -1,0 +1,52 @@
+<TelaPrincView>:
+    name: 'princ_view'
+    MDScreen:
+        MDNavigationLayout:
+            MDScreenManager:
+                MDScreen:    
+                    MDTopAppBar:
+                        pos_hint: {'center_y':.96}
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state('open')]] 
+                        right_action_items: [['dots-vertical']]
+                        
+                    MDFloatLayout:
+
+                        MDRaisedButton:
+                            text: 'Voltar'
+                            pos_hint: {'center_x':.5, 'center_y':.3}
+                            on_release: 
+                                app.root.transition.direction = 'right'
+                                app.root.current = 'login_view'
+
+                        MDBottomAppBar:
+                            MDTopAppBar:
+                                icon: 'android'
+                                type: 'bottom'
+
+            MDNavigationDrawer:
+                id: nav_drawer
+                radius: (0, 16, 16, 0)
+
+                MDNavigationDrawerMenu:
+                    MDNavigationDrawerHeader:
+                        title: 'Menu'
+
+                    MDNavigationDrawerDivider:
+
+                    MDNavigationDrawerItem:
+                        icon: 'images/rickandmorty.png'
+                        text: 'Rick and Morty'
+                        text_color: 'white'
+                        selected_color: 'white'
+                        on_release: 
+                            app.root.transition.direction = 'left'
+                            app.root.current = 'rickandmorty_view'
+
+                    MDNavigationDrawerItem:
+                        icon: 'images/pokebola.png'
+                        text: 'Pokemon'
+                        text_color: 'white'
+                        selected_color: 'white'
+                        on_release: 
+                            app.root.transition.direction = 'left'
+                            app.root.current = 'pokemon_view'

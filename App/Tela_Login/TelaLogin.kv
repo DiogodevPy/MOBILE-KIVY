@@ -1,0 +1,50 @@
+<TelaLoginView>:
+    name: 'login_view'
+    MDScreen:
+        MDFloatLayout:
+            MDIcon:
+                icon: 'language-python'
+                font_size: '120sp'
+                pos_hint: {"center_x": .5, "center_y": .8}
+
+
+            MDTextField:
+                hint_text: 'Usuário'
+                id: usuario
+                size_hint_x: .5
+                pos_hint: {"center_x": .5, "center_y": .58}
+
+            MDTextField:
+                hint_text: 'Senha'
+                id: senha
+                size_hint_x: .5
+                pos_hint: {"center_x": .5, "center_y": .46}
+                password: True
+
+            MDLabel:
+                id: erro
+                halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .39}
+                font_style: 'Body2'
+                theme_text_color: 'Custom'
+                text_color: '#ff0000'
+
+
+            MDTextButton:
+                text: 'Esqueci minha Senha'
+                pos_hint: {"center_x": .5, "center_y": .33}
+
+            MDTextButton:
+                text: 'Cadastre-se'
+                pos_hint: {"center_x": .5, "center_y": .25}
+                # on_release:
+                #     app.root.transition.direction = 'left'
+                #     app.root.current = 'cadastro_view'
+
+
+
+
+            MDRaisedButton:
+                text: 'Entrar'
+                pos_hint: {'center_x':.5, 'center_y':.15}
+                on_release: root.login()

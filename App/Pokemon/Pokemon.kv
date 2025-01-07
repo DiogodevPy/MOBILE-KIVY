@@ -1,0 +1,16 @@
+<PokemonView>:
+    name: 'pokemon_view'
+    MDScreen:
+        MDFloatLayout:
+            MDLabel:
+                text: 'Pokemon'
+                halign: 'center'
+                pos_hint: {"center_x": .5, "center_y": .5}
+                font_style: 'Body2'
+        
+            MDRaisedButton:
+                text: 'Voltar'
+                pos_hint: {'center_x':.5, 'center_y':.3}
+                on_release: 
+                    app.root.transition.direction = 'right'
+                    app.root.current = 'princ_view'
